@@ -29,3 +29,5 @@ Todo:
 - format readme 
 - add ci/cd with travis
 - add tests
+- talk about multithread 
+- add tutorial
