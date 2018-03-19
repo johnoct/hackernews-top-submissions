@@ -23,3 +23,9 @@ push code to heroku
 git push heroku master
 ```
 [Top 15 Hacker News](https://young-retreat-74774.herokuapp.com/top_hn_subs)
+
+
+Todo:
+- format readme 
+- add ci/cd with travis
+- add tests
