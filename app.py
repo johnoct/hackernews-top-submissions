@@ -26,7 +26,7 @@ def hn_submissions():
 
     # Craft an array of URLS
     urls = []
-    for submission in submission_ids[:30]:
+    for submission in submission_ids[:15]:
         urls.append('https://hacker-news.firebaseio.com/v0/item/{}.json'.format(submission))
 
     sessions = []
