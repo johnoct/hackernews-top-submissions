@@ -1,13 +1,14 @@
 import requests
 import json
 import flask
+from flask_cors import CORS
 from concurrent.futures import ProcessPoolExecutor
 from requests import Session
 from requests_futures.sessions import FuturesSession
 from operator import itemgetter
 from flask import Flask
 app = Flask(__name__)
-
+CORS(app)
 
 @app.route('/top_hn_subs')
 def hn_submissions():
@@ -49,5 +50,8 @@ def hn_submissions():
 
     submission_dicts = sorted(
         submission_dicts, key=itemgetter('score'), reverse=True)
+    
+    data_dict = {}
+    data_dict['data'] = submission_dicts
 
-    return flask.jsonify(submission_dicts)
+    return flask.jsonify(data_dict)
