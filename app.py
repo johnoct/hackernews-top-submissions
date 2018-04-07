@@ -6,9 +6,15 @@ from concurrent.futures import ProcessPoolExecutor
 from requests import Session
 from requests_futures.sessions import FuturesSession
 from operator import itemgetter
-from flask import Flask
-app = Flask(__name__)
+from flask import Flask, render_template
+app = Flask(__name__,
+            static_folder = "./dist/static",
+            template_folder = "./dist")
 CORS(app)
+
+@app.route('/')
+def index():
+    return render_template("index.html")
 
 @app.route('/top_hn_subs')
 def hn_submissions():
