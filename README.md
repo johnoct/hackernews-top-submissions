@@ -1,5 +1,6 @@
 # hackernews-top-submissions
 Get the top hacker news submissions.
+[Top 15 Hacker News](https://young-retreat-74774.herokuapp.com)
 
 ```
 pip install -r requirements.txt
@@ -22,7 +23,6 @@ push code to heroku
 ```
 git push heroku master
 ```
-[Top 15 Hacker News](https://young-retreat-74774.herokuapp.com/top_hn_subs)
 
 
 Todo:
